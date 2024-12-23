@@ -9,7 +9,7 @@ jobs:
   sync-to-hub:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v0.0
+      - uses: actions/checkout@v1
         with:
           fetch-depth: 0
           lfs: true
