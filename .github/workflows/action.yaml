@@ -18,4 +18,4 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run:
           git remote set-url origin https://huggingface.co/spaces/MohitWani/demo main
-          git push --force
+          git push
