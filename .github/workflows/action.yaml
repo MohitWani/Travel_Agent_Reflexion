@@ -16,9 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: |
-            git lfs install
-            huggingface-cli login --token $HF_TOKEN
-            huggingface-cli repo create demo --type space --sdk streamlit --repo-id MohitWani/demo --write-access
-            git remote set-url origin https://huggingface.co/spaces/MohitWani/demo
-            git push origin main --force
+        run: git push https://MohitWani:$HF_TOKEN@huggingface.co/spaces/MohitWani/demo main
